@@ -1,0 +1,51 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    
+    <ion-title>
+      <strong>LOGIN</strong>
+      <div class="admin">
+        A D M I N
+      </div>
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="flex flex-col gap-2 w-full mt-5">
+    <div class="m-auto">
+      <ion-icon class="text-blue-600 text-[100px]" name="person-circle-outline"></ion-icon>
+    </div>
+    <div class="text-blue-600 m-auto text-2xl">
+      <Strong>Admin</Strong>App
+    </div>
+  </div>
+
+  <form [formGroup]="form" class="auth-form">
+    <div class="flex flex-col gap-2 mt-4 w-[90%] m-auto">
+      <app-custom-input class="border-none border-4 border-light-blue-500" [control]="form.controls.email" type="email"
+        label="Email" icon="mail-outline"></app-custom-input>
+      <app-custom-input class="border-none border-4 border-light-blue-500" [control]="form.controls.password"
+        type="password" label="Password" icon="lock-closed-outline"></app-custom-input>
+
+      <button (click)="login()" [disabled]="!form.valid"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Ingresar
+      </button>
+
+      <ion-button expand="block" fill="outline" (click)="routerLink()" class="font-bold text-blue-500 py-2 px-4 rounded">
+        Regístrate
+      </ion-button>
+
+    </div>
+
+  </form>
+
+
+</ion-content>

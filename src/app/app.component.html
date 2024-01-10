@@ -1,0 +1,25 @@
+<ion-app class="h-full">
+  <ion-split-pane contentId="main-content">
+    <ion-content class="flex flex-col h-full shadow-black">
+      <ion-toolbar color="primary" class="fixed">
+        <ion-title>
+          <strong>Menu principal</strong>
+          <div class="admin">
+            A D M I N
+          </div>
+        </ion-title>
+      </ion-toolbar>
+
+      <ion-content class="flex-1 overflow-auto ion-padding">
+        <ion-router-outlet class="mt-5"></ion-router-outlet>
+      </ion-content>
+
+      <ion-footer>
+        <ion-toolbar>
+          <ion-title>Footer de app</ion-title>
+        </ion-toolbar>
+      </ion-footer>
+
+    </ion-content>
+  </ion-split-pane>
+</ion-app>
